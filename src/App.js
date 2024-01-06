@@ -1,24 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { loginSuccess, logoutSuccess } from "./store/slices/authSlice";
+import Router from "./Router/Router";
+import { ToastContainer } from "react-toastify";
+import { formatDateToLongString } from "./Utils/string-utils";
+import ApiService from "./Services/ApiService";
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const checkAuth = () => {
+      ApiService.validateAuth(false)
+        .then((response) => {
+          response.data.hiredDate = formatDateToLongString(
+            response.data.hiredDate
+          );
+          dispatch(loginSuccess(response.data));
+        })
+        .catch((err) => {
+          dispatch(logoutSuccess());
+        });
+    };
+
+    checkAuth();
+  }, [dispatch]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router />
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss={false}
+        draggable={false}
+        pauseOnHover={true}
+        theme="light"
+      />
+    </>
   );
 }
 

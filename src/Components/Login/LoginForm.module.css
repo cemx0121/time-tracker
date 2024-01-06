@@ -1,0 +1,157 @@
+.wrapper {
+  padding: 0 20px 0 20px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.row {
+  width: 900px;
+  height: 550px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 5px 5px 10px 1px rgba(255, 255, 255, 0.3);
+}
+
+.side-image {
+  background-image: url("/public/timeSchedule2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  border-radius: 10px 0 0 10px;
+}
+
+.img {
+  width: 35px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  border-radius: 10px;
+}
+
+.text {
+  position: absolute;
+  bottom: -2%;
+  left: 40%;
+  transform: translate(-5%);
+}
+
+.paragraph {
+  color: #000000;
+  font-size: 18px;
+}
+
+.creatorText {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.input-box {
+  width: 330px;
+  box-sizing: border-box;
+}
+
+.headerText {
+  color: tomato;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0 10px 0 10px;
+}
+
+.input {
+  height: 45px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  outline: none;
+  margin-bottom: 20px;
+  color: #40414a;
+}
+
+.label {
+  color: black;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.input:focus ~ .label {
+  top: -10px;
+  font-size: 13px;
+}
+
+.input:valid ~ .label {
+  top: -10px;
+  font-size: 13px;
+  color: #5d5076;
+}
+
+.input:focus,
+.input:valid {
+  border-bottom: 1px solid #743ae1;
+}
+
+.submit {
+  border: none;
+  outline: none;
+  height: 45px;
+  background: #ececec;
+  border-radius: 5px;
+  transition: 0.4s;
+}
+
+.submit:hover {
+  background: rgba(255, 99, 71, 0.9);
+  color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+  .side-image {
+    border-radius: 10px 10px 0 0;
+  }
+  .img {
+    width: 35px;
+    position: absolute;
+    top: 20px;
+    left: 88%;
+  }
+
+  .text {
+    display: none;
+    position: absolute;
+    top: 70%;
+    text-align: center;
+  }
+
+  .paragraph,
+  .creatorText {
+    font-size: 17px;
+  }
+
+  .row {
+    max-width: 420px;
+    width: 100%;
+  }
+}

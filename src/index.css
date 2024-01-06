@@ -1,13 +1,58 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import "react-toastify/dist/ReactToastify.css";
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "react-calendar/dist/Calendar.css";
+@import "react-datepicker/dist/react-datepicker.css";
+:root {
+  --color-default: rgba(0, 0, 0, 0.5);
+  --color-black: #000;
+  --color-second: rgba(0, 0, 0, 0.2);
+  --color-white: #fff;
+  --color-body: #e4e9f7;
+  --color-light: #e0e0e0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: url(/public/backgroundPhoto2.jpg) no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  color: white !important;
+}
+
+._loading_overlay_wrapper {
+  min-height: inherit;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  color: black !important;
+}
+
+.react-calendar__tile {
+  color: black !important;
+}
+
+.tab-pane.active.show {
+  background-color: transparent !important;
+}
+
+.nav-link.active {
+  background-color: tomato !important;
+  border: tomato !important;
+}
+
+.nav-link:not(.active) {
+  color: white !important;
+}
+
+.react-datepicker__input-container input {
+  border-radius: 5px !important;
+  text-align: center;
+  height: 42px;
 }

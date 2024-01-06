@@ -1,0 +1,85 @@
+.profilePicture {
+  width: 60px;
+  min-width: 60px;
+  min-height: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.formControl {
+  max-width: 165px;
+  margin: auto;
+  text-align: center;
+}
+
+.iconButton {
+  cursor: pointer;
+}
+
+.editIcon {
+  color: black;
+}
+
+.trashIcon {
+  color: red;
+  margin-left: 10px;
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sendIcon {
+  color: green;
+}
+
+.cancelIcon {
+  color: red;
+  margin-left: 10px;
+}
+
+.td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.notRegistered {
+  color: rgb(117, 117, 117) !important;
+  font-style: italic;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.timeAndLocation {
+  text-align: center;
+}
+
+.alignMiddle {
+  vertical-align: middle;
+}
+
+.roundedTable {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.roundedTable thead th:second-child {
+  border-top-left-radius: 15px;
+}
+
+.roundedTable thead th:second-child {
+  border-top-right-radius: 15px;
+}
+
+.roundedTable tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 15px;
+}
+
+.roundedTable tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 15px;
+}

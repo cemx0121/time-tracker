@@ -1,0 +1,28 @@
+.form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.label {
+  color: black;
+}
+
+.checkBoxLabel {
+  color: black;
+}
+
+.submitBtn {
+  background-color: tomato;
+  border-color: tomato;
+  color: black;
+  transition: 0.2s ease-in-out;
+}
+
+.submitBtn:hover {
+  background-color: tomato;
+  border-color: tomato;
+  color: black;
+  transform: scale(1.05);
+}
